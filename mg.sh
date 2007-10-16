@@ -1,6 +1,6 @@
 #!/bin/sh
 
-RV="2.0l"
+RV="2.0l" 		# residual lung volume
 weight_unit="kg"
 
 
@@ -11,7 +11,7 @@ fi
 
 w=`units -tq "$1" $weight_unit`
 if [ ! -z "$2" ]; then
-    f=`(echo "495/(w/((w/(0.997kg/l))-$2-$RV-0.1l)) - 450kg/l"; echo 'kg/l') \
+    f=`(echo "495/($1/(($1/(0.997kg/l))-$2-$RV-0.1l)) - 450l/kg"; echo 'l/kg') \
       | units -tq`
 fi
 

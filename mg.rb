@@ -3,7 +3,7 @@
 # height in cm
 height = 193
 ymin = 100
-ymax = 125
+ymax = 122
 S = 0.9 # smoothing factor for exponentially smoothed moving average
 ## End Configuration
 
@@ -25,10 +25,13 @@ set yrange [ymin:ymax]
 set y2range [ymin/h2:ymax/h2]
 
 set ylabel 'kg'
-set y2label 'BMI and percent body fat'
-set title 'Weight and Body Fat Percentage'
+set y2label 'BMI and %BF'
+#set title 'Weight and Body Fat Percentage'
 
-set terminal svg 
+set xtics rotate by -45
+set nomxtics
+set terminal svg dynamic rounded linewidth 3
+unset key
 
 plot '-' u 1:2 t 'Weight' w dots, \
      '-' u 1:3 t 'Weight Trend' w l, \
