@@ -1,0 +1,6 @@
+Weight graph with trend based on "The Hacker's Diet"[1], with the addition of
+percent body fat (%BF) and its trend.
+
+Data: date, weight, %BF
+
+Use case: user types 'mg weight [%BF]' and the entry is added to the data file, then the graph is generated.
