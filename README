@@ -1,6 +1,8 @@
 Weight graph with trend based on "The Hacker's Diet"[1], with the addition of
 percent body fat (%BF) and its trend.
 
-Data: date, weight, %BF
+Tweak the configuration at the top of mg.rb and mg.sh. I use a script like daily.sh to automate things. I might type something like this in the morning:
 
-Use case: user types 'mg weight [%BF]' and the entry is added to the data file, then the graph is generated.
+    ./daily.sh 120kg 1.49l
+
+1. http://www.fourmilab.ch/hackdiet/
