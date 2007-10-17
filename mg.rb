@@ -30,13 +30,14 @@ set y2label 'BMI and %BF'
 
 set xtics rotate by -45
 set nomxtics
-set terminal svg dynamic rounded linewidth 3
+set terminal svg dynamic rounded
+set grid
 unset key
 
 plot '-' u 1:2 t 'Weight' w dots, \
-     '-' u 1:3 t 'Weight Trend' w l, \
+     '-' u 1:3 t 'Weight Trend' w l lw 4, \
      '-' u 1:4 ax x1y2 t '%BF' w dots, \
-     '-' u 1:5 ax x1y2 t '%BF Trend' w l
+     '-' u 1:5 ax x1y2 t '%BF Trend' w l lw 2
 EOF
 
 data = []
