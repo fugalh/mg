@@ -1,8 +1,8 @@
 #!/usr/bin/ruby
 ## Configuration
 # height in cm
-height = 193
-ymin = 100
+height = 194
+ymin = 80
 ymax = 122
 S = 0.9 # smoothing factor for exponentially smoothed moving average
 ## End Configuration
